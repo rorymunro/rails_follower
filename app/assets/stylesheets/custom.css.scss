@@ -1,0 +1,113 @@
+@import "bootstrap";
+
+/* MIXINS, VARIABLES ETC */
+
+$greenyBlue: #1b5b5b;
+$rubyRed: #982d2d;
+
+/* UNIVERSAL */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+    padding-top: 140px;
+
+}
+
+section {
+    overflow: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* HEADER */
+
+#railslogo {
+    float: left;
+    max-width: 140px;
+}
+
+
+.navbar .nav > li {
+    float: left;
+    margin-top: 55px;
+    a {
+    font-size: 20px;
+    color: $greenyBlue;
+    text-shadow: 0px 1px 2px;
+    font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    &:hover {
+    color: #ffc573;
+    background: none;
+    }
+    }
+}
+
+
+.navbar-inner {
+    background: white;
+    border: none;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+  
+  margin-top: 300px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+
+  a {
+    color: #555;
+    &:hover {
+      color: #222;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+     }
+   }
+}
+
+/* WELCOME H1 */
+#welcome {
+  h1{
+  color: $rubyRed;
+  text-shadow: 0px 1px 2px black;
+  font: bold 54px book antiqua;
+  }
+}
+
+/* HOME PICTURE */
+
+#laughing {
+  img{
+  border-radius: 3px;
+  margin-top: 100px;
+  }
+}
+
+/* SIGN IN PAGE */
+
+#signin {
+  h1 {
+  color: $rubyRed;
+  text-shadow: 0px 1px 2px black;
+  font: bold 54px book antiqua;
+  }
+}
