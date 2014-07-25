@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   devise_for :installs
-  devise_for :users do
-    get '/users/sign_out' => 'devise/sessions#destroy'
-  end
+  devise_for :users 
 
   root 'static_pages#home'
   match '/news', to: 'static_pages#news', via: 'get'
