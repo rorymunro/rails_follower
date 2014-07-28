@@ -1,5 +1,5 @@
 <div class= "text-center", id= "signin">
-<h1>Sign in</h1>
+<h1 class="lead" data-0="color:rgb(152,45,45);" data-150="color: rgb(232, 135, 135)">Sign In</h1>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div><%= f.label :email %><br />
@@ -16,4 +16,13 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<% if @current_user %>
+    <%= welcome  Welcome %>
+    <%= button_to 'Log Out', '/auth/twitter' %>
+   <% else%>
+    
+<% end %>
 </div>
+
+<script type="text/javascript" src="js/skrollr.min.js"></script> <script type="text/javascript"> var s = skrollr.init(); </script>

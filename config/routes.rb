@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   devise_for :installs
-  devise_for :users 
+  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }, :sign_out_via => [ :post, :delete ]
 
   root 'static_pages#home'
   match '/news', to: 'static_pages#news', via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
-
+    match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

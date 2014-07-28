@@ -1,5 +1,6 @@
 <div class= "text-center", id= "welcome">
-  <h1>Welcome to Rails Follow</h1>
+  <h1 class="lead" data-0="color:rgb(152,45,45);" data-150="color: rgb(250, 208, 208)">Welcome to Rails Follow</h1>
+
 </div>
 
 <div class= "text-center">
@@ -9,3 +10,11 @@
 <div class= "text-center", id= "laughing">
 	<%= image_tag("laughing300x205.jpg", alt: "People laughing around a laptop") %>
 </div>
+<% if user_signed_in? %>
+<div class= "text-center">
+	<h2 id= "hey">Hey there <%= current_user.name %></h2>
+		<% end %>
+
+</div>
+<script type="text/javascript" src="js/skrollr.min.js"></script> <script type="text/javascript"> var s = skrollr.init(); </script>
+

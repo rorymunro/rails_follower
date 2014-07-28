@@ -1,0 +1,20 @@
+%header.navbar.navbar-fixed-top.navbar-default
+  .navbar-inner{"data-0" => "background-color:rgb(255, 255 ,255);", "data-150" => "background-color: rgb(250, 208, 208)"}
+    .container
+      %a{:href => "/"}
+        %img#railslogo{:alt => "rails logo", :src => "/assets/railslogo.png"}/
+      %nav
+        <ul class= "nav pull-right", id= "headul">
+        %li
+          %a.lead{:href => "/" } Home
+        %li
+          %a{:href => "/news"} News
+        %li
+          %a{:href => "/about"} About
+
+        - if user_signed_in?
+          %li
+            %a{"data-method" => "delete", :href => "/users/sign_out", :rel => "nofollow"} Sign out
+        - else
+          %li
+            %a{:href => "/users/sign_in"} Sign in
