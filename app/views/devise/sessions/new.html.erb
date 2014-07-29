@@ -2,10 +2,10 @@
 <h1 class="lead" data-0="color:rgb(152,45,45);" data-150="color: rgb(232, 135, 135)">Sign In</h1>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
+  <div id= "email"><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
-  <div><%= f.label :password %><br />
+  <div id= "pass"><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
   <% if devise_mapping.rememberable? -%>
